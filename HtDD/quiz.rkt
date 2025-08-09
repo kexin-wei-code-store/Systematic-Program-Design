@@ -98,8 +98,8 @@
 
 #;
 (define (fn-for-health h)
-  (cond [(number? h) (...)]
-        [(false? h) (...)]
+  (cond [(false? h) (...)]
+        [else (...h)]
         ))
 
 ;; Health -> Health
@@ -114,6 +114,6 @@
 ; <template borrowed from Health>
 
 (define (increase-health h)
-  (cond [(number? h) (+ 1 h)]
-        [(false? h) false]
+  (cond [(false? h) false]
+        [else (+ 1 h)]
         ))
